@@ -16,6 +16,9 @@ class PasswordManager:
         """helps to create Password"""
         pass
 
+    def show_password(self):
+        pass
+
     def save_password(self):
         pass
 
@@ -35,6 +38,7 @@ if __name__ == "__main__":
     first_name = input("Enter Your First Name:\n")
     last_name = input("\nEnter Your Last Name:\n")
     age = input("\nEnter Your age:\n")
+    # write code to save the data in the users.json file
     site_name = input(
         "\nEnter the Site Name for which you need the password to be created and saved:\n")
     keyword = input(
@@ -42,4 +46,9 @@ if __name__ == "__main__":
     key_char = input("\nYour Unique Key Char for the Password")
     new_instance = PasswordManager(
         first_name, last_name, age, site_name, keyword, key_char)
+    # ensure to create a new json file and store the data there if user is not available in users.json
+    # else append the password directly to the user_name.json file with the key_char
+    generate_password()
+    # And after generate password save_password should be called and the respective saving operations
+    # should be performed there.
     pass
