@@ -45,7 +45,7 @@
 ###### ⚡  GitHub repository URLs will reference both the username associated with the owner of the repository, as well as the repository name.
 ###### ⚡  When you’re on the main page for the repository, you’ll see a button to "Star" and “Fork” the repository on your upper right-hand side of the page, underneath your user icon.
 
-<h2 align="center">😎🙏 Thanks to Our Awesome Contributors 🙏😎</h2>
+<h2 align="center">😎 Thanks to Our Awesome Contributors 😎</h2>
 
 <a href="https://github.com/Xtreme-Thinkers/hacktoberfest2022/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Xtreme-Thinkers/hacktoberfest2022" />
