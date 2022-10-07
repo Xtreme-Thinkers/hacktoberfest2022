@@ -5,10 +5,18 @@ import json
 class PasswordManager:
     passwords = {}
 
-    def __init__(self, first_name, last_name, age, site_name, keyword, key_char):
+    def __init__(self):
         self.user_symbols = None
         self.user_numbers = None
         self.user_letters = None
+        self.first_name = None
+        self.last_name = None
+        self.age = None
+        self.site_name = None
+        self.keyword = None
+        self.key_char = None
+
+    def create_user(self, first_name, last_name, age, site_name, keyword, key_char):
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
@@ -111,59 +119,112 @@ class PasswordManager:
                 else:
                     print(f"No details for {self.site_name_value} exists.")
 
-    def update_password(self):
-        pass
+    def update_password(self, site_name_value):
+        self.site_name_value = site_name_value
+        if len(self.site_name_value) == 0:
+            print("Make sure your site_name is filled!")
+        else:
+            try:
+                with open("data.json", 'r') as data_file:
+                    data = json.load(data_file)
+            except FileNotFoundError:
+                print("No data file found")
+            else:
+                if self.site_name_value in data:
+                    name = data[self.site_name_value]["first_name"]
+                    password = data[self.site_name_value]["password"]
+                    letters = int(input("\nHow many letters do you want?\n"))
+                    symbols = int(input("How many symbols do you want?\n"))
+                    number = int(input("How many numbers do you want?\n"))
+                    if letters != 0 and symbols != 0 and number != 0:
+                        new_password = self.generate_password(letters, symbols, number)
+                        print(f"Password for: {name} was: {password}")
+                        with open("data.json", "r") as a_file:
+                            json_object = json.load(a_file)
+                        # print(json_object)
+                        json_object[self.site_name_value]["password"] = new_password
+                        print(f"New password for: {name} is: {new_password}")
+                        with open("data.json", "w") as a_file:
+                            json.dump(json_object, a_file,indent=4)
+                    else:
+                        # if all inputs are zero then no password is generated.
+                        print("No new password generated...")
+                else:
+                    print(f"No details for {self.site_name_value} exists.")
 
     def delete_password(self):
         pass
 
 
 if __name__ == "__main__":
-    operation = input(
-        "What you want to do?\n(create/update/delete/find Password)\n Just enter the commands (c/u/d/f)\n")
-    first_name = input("Enter Your First Name:\n")
-    last_name = input("\nEnter Your Last Name:\n")
-    age = input("\nEnter Your age:\n")
-    # write code to save the data in the users.json file
-    site_name = input(
-        "\nEnter the Site Name for which you need the password to be created and saved:\n")
-    keyword = input(
-        "\n Enter the Key Word that you want to identify the password with:\n")
-    key_char = input("\nYour Unique Key Char for the Password")
-    new_instance = PasswordManager(
-        first_name, last_name, age, site_name, keyword, key_char)
-    # ensure to create a new json file and store the data there if user is not available in users.json
-    # else append the password directly to the user_name.json file with the key_char
-    input_letters = int(input("How many letters do you want?\n"))
-    input_symbols = int(input("How many symbols do you want?\n"))
-    input_number = int(input("How many numbers do you want?\n"))
-    # checks if users enters all inputs as 0.
-    if input_letters != 0 and input_symbols != 0 and input_number != 0:
-        user_password = new_instance.generate_password(input_letters, input_symbols, input_number)
-        # shows the password latter show_password function can call it from json and show it if needed.
-        print(f"Your password is: {user_password}")
-        user_choice = input("Do you want to save it? y for yes and n for no.\n")
-        correct_choice = False
-        while not correct_choice:
-            if user_choice == "y":
-                print("Saving...")
-                # saves the password in save.txt later a function can be called.
-                new_instance.save_password(user_password)
-                print("Saved...")
-                correct_choice = True
-            elif user_choice == "n":
-                print("Exiting...")
-                correct_choice = True
-            else:
-                print("Wrong input...")
-                # continues to ask whether to save the password or not.
+    commands = ["c", "u", "d", "f", "q"]
+    ask = True
+    while ask:
+        operation = input(
+            "What you want to do?\n(create/update/delete/find Password)\nJust enter the commands (c/u/d/f)\n")
+
+        if operation not in commands:
+            print("Wrong argument.......\n")
+        if operation == "c":
+            first_name = input("Enter Your First Name:\n")
+            last_name = input("\nEnter Your Last Name:\n")
+            age = input("\nEnter Your age:\n")
+            # write code to save the data in the users.json file
+            site_name = input(
+                "\nEnter the Site Name for which you need the password to be created and saved:\n")
+            keyword = input(
+                "\nEnter the Key Word that you want to identify the password with:\n")
+            key_char = input("\nYour Unique Key Char for the Password:\n")
+            new_instance = PasswordManager()
+            new_instance.create_user(first_name, last_name, age, site_name, keyword, key_char)
+            # ensure to create a new json file and store the data there if user is not available in users.json
+            # else append the password directly to the user_name.json file with the key_char
+            input_letters = int(input("\nHow many letters do you want?\n"))
+            input_symbols = int(input("How many symbols do you want?\n"))
+            input_number = int(input("How many numbers do you want?\n"))
+            # checks if users enters all inputs as 0.
+            if input_letters != 0 and input_symbols != 0 and input_number != 0:
+                user_password = new_instance.generate_password(input_letters, input_symbols, input_number)
+                # shows the password latter show_password function can call it from json and show it if needed.
+                print(f"Your password is: {user_password}")
                 user_choice = input("Do you want to save it? y for yes and n for no.\n")
-    else:
-        # if all inputs are zero then no password is generated.
-        print("No password generated...")
-    # And after generate password save_password should be called and the respective saving operations
-    # should be performed there.
-    find_password = (input("Find password?\n"))
-    if find_password == 'y':
-        site_name = (input("password for?\n"))
-        new_instance.find_password(site_name)
+                correct_choice = False
+                while not correct_choice:
+                    if user_choice == "y":
+                        print("Saving...")
+                        # saves the password in save.txt later a function can be called.
+                        new_instance.save_password(user_password)
+                        print("Saved...\n")
+                        correct_choice = True
+                    elif user_choice == "n":
+                        print("Exiting...\n")
+                        correct_choice = True
+                    else:
+                        print("Wrong input...")
+                        # continues to ask whether to save the password or not.
+                        user_choice = input("Do you want to save it? y for yes and n for no.\n")
+            else:
+                # if all inputs are zero then no password is generated.
+                print("No password generated...")
+            # And after generate password save_password should be called and the respective saving operations
+            # should be performed there.
+        if operation == 'f':
+            find_password = (input("Find password (y/n)?\n"))
+            if find_password == 'y':
+                site_name = (input("password for?\n"))
+                new_instance = PasswordManager()
+                new_instance.find_password(site_name)
+                print()
+            else:
+                print("................................\n")
+        if operation == 'u':
+            update_password = (input("Update password (y/n)?\n"))
+            if update_password == 'y':
+                site_name = (input("password for?\n"))
+                new_instance = PasswordManager()
+                new_instance.update_password(site_name)
+                print()
+            else:
+                print("................................\n")
+        if operation == 'q':
+            break
