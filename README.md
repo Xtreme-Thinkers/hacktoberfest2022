@@ -24,7 +24,7 @@
 - [Firsttimers platform for new and specific issues](https://www.firsttimersonly.com/)
 
 ### SHARPEN YOUR SKILLS
-- Here we have some links to get to know more about Github and Gitlab and about Contribution
+- Here we have some links for you to know more about Github and Gitlab and about Contribution
 1. [Github Training Kit](https://github.github.com/training-kit/)
 2. [Understanding the Github Flow](https://guides.github.com/introduction/flow/)
 3. [Getting started with Gitlab](https://about.gitlab.com/get-started/)
@@ -40,9 +40,9 @@
 
 ### Star and Fork this Repository 👇🏻
 ###### ⚡  Raise an issue by yourself to this repo of (what changes can be made / what new features can be implemented) and then later based on my review i will assign the issue to you then later you can probably make your changes and raise a PR.
-###### ⚡  You can star ⭐ and fork 🍽️ this repository on GitHub by navigating at the top of this repository.
+###### ⚡  You can star ⭐ and fork 🍽️ this repository on GitHub by navigating to the top of this repository.
 ###### ⚡  GitHub repository URLs will reference both the username associated with the owner of the repository, as well as the repository name.
-###### ⚡  When you’re on the main page for the repository, you’ll see a button to "Star" and “Fork” the repository on your upper right-hand side of the page, underneath your user icon.
+###### ⚡  When you’re on the main page of the repository, you’ll see a button to "Star" and “Fork” the repository at the top right of the page, underneath your user icon.
 
 <h2 align="center">😎 Thanks to Our Awesome Contributors 😎</h2>
 
