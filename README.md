@@ -14,7 +14,7 @@
 
 ### START CONTRIBUTING
 - Please visit the websites above to get to know about open source, how to raise a Pull Request, how to submit an issue etc.
-- If you would love to contribute to other projects do visit the websites below etc.,
+- If you would love to contribute to other projects do visit the websites below,
 - - List of Beginner repositories: [UP FOR GRABS.NET](https://up-for-grabs.net/#/)
 - - Github Repo: [FIRST CONTRIBUTORS](https://github.com/firstcontributions/first-contributions)
 - - Github Repo: [AWESOME FOR BEGINNERS](https://github.com/mungell/awesome-for-beginners)
