@@ -13,9 +13,9 @@
 - DigitalOcean: [How to use Git?](https://www.digitalocean.com/community/cheatsheets/how-to-use-git-a-reference-guide)
 
 ### START CONTRIBUTING
-- Please do visit the above websites and get to know about open source and also know about how to raise a PR, how to submit an issue etc.,
-- Please do wait till the hacktoberfest starts to have the repo updated with Issues and Features
-- If you feel to contribute more on other projects do visit the below websites etc.,
+- Please visit the above websites and get to know about open source and also know about how to raise a Pull Request, how to submit an issue etc.,
+- Please wait till the hacktoberfest starts to have the repo updated with Issues and Features
+- If you feel to contribute more on other projects visit the websites below:
 - - List of Beginner repositories: [UP FOR GRABS.NET](https://up-for-grabs.net/#/)
 - - Github Repo: [FIRST CONTRIBUTORS](https://github.com/firstcontributions/first-contributions)
 - - Github Repo: [AWESOME FOR BEGINNERS](https://github.com/mungell/awesome-for-beginners)
@@ -25,7 +25,7 @@
 - [Firsttimers platform for new and specific issues](https://www.firsttimersonly.com/)
 
 ### SHARPEN YOUR SKILLS
-- Here we do have some links to get to know more about Github an Gitlab and also about Contribution
+- Here we have some links to get to know more about Github an Gitlab and also about Contribution
 1. [Github Training Kit](https://github.github.com/training-kit/)
 2. [Understanding the Github Flow](https://guides.github.com/introduction/flow/)
 3. [Getting started with Gitlab](https://about.gitlab.com/get-started/)
