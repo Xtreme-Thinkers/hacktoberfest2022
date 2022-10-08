@@ -21,11 +21,6 @@ The application then shows two parameters :
 1. Number of Reviews
 2. Average Rating (Out of 10)
 
-To use the Feedback Application : 
-
-1. Download/Clone the repository to local host.
-2. Open the terminal in the feedback-app folder.
-
 <br />
 
 
