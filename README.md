@@ -39,7 +39,7 @@
 [Rebasing and Updating Pull Request](https://www.digitalocean.com/community/tutorials/how-to-rebase-and-update-a-pull-request)
 
 ### Star and Fork this Repository 👇🏻
-###### ⚡  Raise an isue by yourself to this repo of (what changes can be made / what new features can be implemented) and then later based on my review i will assign the issue to you then later you can probably make your changes and raise a PR.
+###### ⚡  Raise an issue by yourself to this repo of (what changes can be made / what new features can be implemented) and then later based on my review i will assign the issue to you then later you can probably make your changes and raise a PR.
 ###### ⚡  You can star ⭐ and fork 🍽️ this repository on GitHub by navigating at the top of this repository.
 ###### ⚡  GitHub repository URLs will reference both the username associated with the owner of the repository, as well as the repository name.
 ###### ⚡  When you’re on the main page for the repository, you’ll see a button to "Star" and “Fork” the repository on your upper right-hand side of the page, underneath your user icon.
