@@ -1,22 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
     <title>Drawing App</title>
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <canvas id="canvas" width="800" height="700"></canvas>
-    <div class="toolbox">
-      <button id="decrease">-</button>
-      <span id="size">10</span>
-      <button id="increase">+</button>
-      <input type="color" id="color">
-      <button id ="clear">X</button>
-      <button class = "save" > Save </button>
+    <div id="paintArea">
+      <canvas id="canvas"></canvas>
     </div>
-
+    <div class="options">
+      <div class="tools" id="tools-section">
+        <div class="tools-row">
+          <div class="tools-wrapper">
+            <h5><span id="tool-type"></span> Size:</h5>
+            <input type="range" id="pen-slider" value="4" />
+          </div>
+          <div class="tools-wrapper">
+            <h5>Color:</h5>
+            <input type="color" id="color-input" />
+          </div>
+          <div class="tools-wrapper">
+            <h5>Background Color:</h5>
+            <input type="color" id="color-background" />
+          </div>
+        </div>
+        <div class="tools-row">
+          <button id="button-clear">Clear</button>
+          <button id="button-pen">Pen</button>
+          <button id="button-erase">Erase</button>
+        </div>
+      </div>
+    </div>
+    <!-- Script-->
     <script src="script.js"></script>
   </body>
 </html>
