@@ -1,10 +1,10 @@
 # HacktoberFest 2022
 
-## This is a unique chance to the people who are new and taking steps into Open Source and also for those who are having hunger to contribute more.
+## This is a unique chance for people who are new to Open Source and also for those who would love to contribute more.
 
 ## Resources for Beginners
 
-**Note** - The below resources will helps the Beginners who are getting into Open Source to know more about what is Open Source, what is git, how to contribute etc.,
+**Note** - The resources below will help Beginners to know more about Open Source, Git and How to contribute.
 
 ### INTRO TO OPEN SOURCE
 - DigitalOcean: [Intro to Github and Open Source Projects](https://www.digitalocean.com/community/tutorial_series/an-introduction-to-open-source)
@@ -13,9 +13,8 @@
 - DigitalOcean: [How to use Git?](https://www.digitalocean.com/community/cheatsheets/how-to-use-git-a-reference-guide)
 
 ### START CONTRIBUTING
-- Please do visit the above websites and get to know about open source and also know about how to raise a PR, how to submit an issue etc.,
-- Please do wait till the hacktoberfest starts to have the repo updated with Issues and Features
-- If you feel to contribute more on other projects do visit the below websites etc.,
+- Please visit the websites above to get to know about open source, how to raise a Pull Request, how to submit an issue etc.
+- If you would love to contribute to other projects do visit the websites below,
 - - List of Beginner repositories: [UP FOR GRABS.NET](https://up-for-grabs.net/#/)
 - - Github Repo: [FIRST CONTRIBUTORS](https://github.com/firstcontributions/first-contributions)
 - - Github Repo: [AWESOME FOR BEGINNERS](https://github.com/mungell/awesome-for-beginners)
@@ -25,7 +24,7 @@
 - [Firsttimers platform for new and specific issues](https://www.firsttimersonly.com/)
 
 ### SHARPEN YOUR SKILLS
-- Here we do have some links to get to know more about Github an Gitlab and also about Contribution
+- Here we have some links for you to know more about Github and Gitlab and about Contribution
 1. [Github Training Kit](https://github.github.com/training-kit/)
 2. [Understanding the Github Flow](https://guides.github.com/introduction/flow/)
 3. [Getting started with Gitlab](https://about.gitlab.com/get-started/)
@@ -40,10 +39,10 @@
 [Rebasing and Updating Pull Request](https://www.digitalocean.com/community/tutorials/how-to-rebase-and-update-a-pull-request)
 
 ### Star and Fork this Repository 👇🏻
-###### ⚡  Do Raise an isue by yourself to this repo of (what changes that you wanted to do / what new features or projects that you want to implement) and then later based on my review i will assign the issue to you then later you can probably make your changes and raise a PR.
-###### ⚡  You can star ⭐ and fork 🍽️ this repository on GitHub by navigating at the top of this repository.
+###### ⚡  Raise an issue by yourself to this repo of (what changes can be made / what new features can be implemented) and then later based on my review i will assign the issue to you then later you can probably make your changes and raise a PR.
+###### ⚡  You can star ⭐ and fork 🍽️ this repository on GitHub by navigating to the top of this repository.
 ###### ⚡  GitHub repository URLs will reference both the username associated with the owner of the repository, as well as the repository name.
-###### ⚡  When you’re on the main page for the repository, you’ll see a button to "Star" and “Fork” the repository on your upper right-hand side of the page, underneath your user icon.
+###### ⚡  When you’re on the main page of the repository, you’ll see a button to "Star" and “Fork” the repository at the top right of the page, underneath your user icon.
 
 <h2 align="center">😎 Thanks to Our Awesome Contributors 😎</h2>
 
@@ -61,7 +60,7 @@ If you have any feedback please reach out to me on [LinkedIn](https://www.linked
 
 Follow us on Github [Xtreme Thinkerz](https://github.com/Xtreme-Thinkers)
 
-Do Mail Your issues to xtremethinkerz.sols@gmail.com. 
+Mail Your issues to xtremethinkerz.sols@gmail.com. 
 As we are short on staff please expect some delay in replies but not on Merge Requests
 
 If it is an absolute emergency do visit [Manjunatha Sai Uppu](https://manjunani.github.io/manjunathasaiuppu/)
