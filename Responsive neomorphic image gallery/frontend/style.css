@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Bangers&family=Indie+Flower&family=Montserrat+Alternates&family=Righteous&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Righteous", cursive;
+}
+
+body {
+  background: #dde1e7;
+}
+
+.container {
+  width: 100%;
+  text-align: center;
+}
+
+input {
+  display: none;
+}
+
+.container h1 {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  color: brown;
+}
+
+.container h1::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  background-color: crimson;
+  margin-top: 3%;
+  left: 50%;
+  transform: translatex(-50%);
+  animation: animate 2s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    width: 100px;
+  }
+
+  50% {
+    width: 200px;
+    background: chartreuse;
+  }
+
+  100% {
+    width: 100px;
+  }
+}
+
+.container h1 i {
+  color: forestgreen;
+  font-size: 3rem;
+}
+
+.container .nav {
+  display: flex;
+  flex-direction: row;
+  column-gap: 15px;
+  margin-left: 30%;
+  margin-top: 20px;
+  width: fit-content;
+  padding: 0 0;
+  background: #dde1e7;
+  border-radius: 10px;
+  box-shadow: -3px -3px 5px #ffffff, 3px 3px 15px #00000070;
+}
+
+.container .nav .cliff {
+  padding: 10px 30px;
+  border-radius: 10px;
+  box-shadow: inset -3px -3px 5px #ffffff, inset 3px 3px 15px #00000070;
+}
+
+.container .nav ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.container .nav ul li {
+  list-style-type: none;
+  padding: 10px 30px;
+}
+
+.container .nav ul li:hover {
+  border-radius: 10px;
+  box-shadow: inset -3px -3px 5px #ffffff, inset 3px 3px 15px #00000070;
+  transition: 0.2s all ease-in-out;
+}
+
+.photo-gallery {
+  width: 90%;
+  margin: auto;
+  padding-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+  grid-gap: 15px;
+}
+
+.pic {
+  position: relative;
+  height: 230px;
+  border-radius: 10px;
+  box-shadow: -3px -3px 5px #ffffff, 3px 3px 15px #000000;
+  cursor: grab;
+  transition: 0.5s;
+}
+
+.pic::before {
+  content: "PHOTO GALLERY";
+  position: absolute;
+  color: #ffffff;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: -100px;
+  opacity: 0;
+  transition: 0.3s;
+  transition-delay: 0.2s;
+  z-index: 1;
+}
+
+.pic::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  border-radius: 10px;
+  height: 0;
+  background: rgba(0, 0, 0, 0.415);
+  transition: 0.3s;
+}
+
+.pic:hover::after {
+  height: 100%;
+}
+
+.pic:hover::before {
+  margin-top: 0;
+  opacity: 1;
+}
+
+.pic img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+#check-1:checked ~ .container .photo-gallery .pic {
+  opacity: 1;
+  transform: scale(1);
+  position: relative;
+  transition: 0.5s;
+}
+
+#check-2:checked ~ .container .photo-gallery .animals {
+  transform: scale(1);
+  opacity: 1;
+  position: relative;
+}
+
+#check-2:checked ~ .container .photo-gallery .birds,
+#check-2:checked ~ .container .photo-gallery .panorama {
+  opacity: 0;
+  transform: scale(0);
+  position: absolute;
+  transition: 0s;
+}
+
+/* ------------------------------ */
+#check-3:checked ~ .container .photo-gallery .birds {
+  transform: scale(1);
+  opacity: 1;
+  position: relative;
+}
+
+#check-3:checked ~ .container .photo-gallery .animals,
+#check-3:checked ~ .container .photo-gallery .panorama {
+  opacity: 0;
+  transform: scale(0);
+  position: absolute;
+  transition: 0s;
+}
+
+/* ------------------------------ */
+#check-4:checked ~ .container .photo-gallery .panorama {
+  transform: scale(1);
+  opacity: 1;
+  position: relative;
+}
+
+#check-4:checked ~ .container .photo-gallery .animals,
+#check-4:checked ~ .container .photo-gallery .birds {
+  opacity: 0;
+  transform: scale(0);
+  position: absolute;
+  transition: 0s;
+}
+
+@media (max-width: 1045px) {
+  .container h1::before {
+    top: 20px;
+  }
+}
+
+@media (max-width: 906px) {
+  .container .nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2px 0;
+    margin-left: 8%;
+    transition: 0.3s all ease;
+  }
+
+  .container h1::before {
+    top: 20px;
+  }
+
+  body {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    margin-bottom: 20px;
+  }
+
+  .container .nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2px 0;
+    column-gap: 5px;
+    margin-left: -5%;
+    transition: 0.3s all ease;
+  }
+
+  .container .nav ul li {
+    padding: 10px 0;
+  }
+
+  .container .nav .cliff {
+    padding-left: 100px;
+    padding-right: 100px;
+    max-width: fit-content;
+  }
+
+  .container h1::before {
+    top: 35px;
+  }
+}
+
+@media (max-width: 700px) {
+  .container .nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2px 0;
+    column-gap: 5px;
+    margin-left: 2%;
+    margin-right: 2%;
+    transition: 0.3s all ease;
+  }
+
+  .container .nav ul li {
+    padding: 10px 15px;
+  }
+
+  .container .nav .cliff {
+    padding-left: 140px;
+    padding-right: 180px;
+    max-width: fit-content;
+  }
+
+  .container h1::before {
+    top: 35px;
+  }
+
+  body {
+    margin-bottom: 20px;
+  }
+}
