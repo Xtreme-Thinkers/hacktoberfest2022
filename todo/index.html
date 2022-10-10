@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!--- Tailwind CSS & Daisy UI CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.18.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- Favicon -->
+    <link rel="icon" href="res/favicon.ico" />
+    <title>Todo List</title>
+  </head>
+  <body style="background: url('todo.jpg') no-repeat center center">
+    <div class="container">
+      <header>
+        <h1>Todo List ✍</h1>
+
+        <div class="input-section">
+          <input
+            type="text"
+            placeholder="Add a todo . . ."
+            class="input input-bordered input-secondary w-full max-w-xs"
+            autofocus="on"
+          />
+          <button class="btn btn-secondary add-task-button">
+            <i class="bx bx-plus bx-sm"></i>
+          </button>
+        </div>
+      </header>
+
+      <div class="todos-filter">
+        <button class="btn btn-secondary delete-all-btn">Delete All</button>
+      </div>
+
+      <ul class="todos-list"></ul>
+    </div>
+    <!-- JS -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
