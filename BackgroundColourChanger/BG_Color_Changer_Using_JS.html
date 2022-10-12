@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: sans-serif;
+            transition: background 0.3s ease;
+        }
+
+        .btn {
+            background: black;
+            color: white;
+            padding: 20px 50px;
+            border: 0;
+            font-size: 20px;
+            border-radius: 20px 20px 20px 20px;
+        }
+
+        .hex {
+            font-size: 20px;
+        }
+    </style>
+    <title>Change BG Color</title>
+</head>
+
+<body>
+    <button onclick="generatecode()" class="btn" id="sub">
+        Change
+    </button>
+    <p class="hex" id="color">#000000</p>
+</body>
+
+<script>
+    function generatecode(){
+         var random = (Math.floor(Math.random()*16777216)).toString(16);
+         console.log(random);
+         document.body.style.backgroundColor = "#" + random;
+         var hexcode = document.getElementById("color");
+         hexcode.innerText = "#" + random
+    }
+
+</script>
+
+</html>
