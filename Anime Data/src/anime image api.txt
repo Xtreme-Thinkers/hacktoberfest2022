@@ -1,0 +1,34 @@
+##1.....
+
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': 'e617a2efedmshbd66aeaed99abaap132aa9jsn2ab165a6f790',
+		'X-RapidAPI-Host': 'best-manga-anime-wallpapers.p.rapidapi.com'
+	}
+};
+
+fetch('https://best-manga-anime-wallpapers.p.rapidapi.com/', options)
+	.then(response => response.json())
+	.then(response => console.log(response))
+	.catch(err => console.error(err));
+
+##2.....
+
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': 'e617a2efedmshbd66aeaed99abaap132aa9jsn2ab165a6f790',
+		'X-RapidAPI-Host': 'best-manga-anime-wallpapers.p.rapidapi.com'
+	}
+};
+
+fetch('https://best-manga-anime-wallpapers.p.rapidapi.com/wallpapers/naruto-hd-wallpapers', options)
+	.then(response => response.json())
+	.then(response => console.log(response))
+	.catch(err => console.error(err));
+
+
+###3.....
+https://kitsu.io/api/edge/anime?filter[categories]=adventure
+https://kitsu.io/api/edge/anime?filter[text]=naruto
