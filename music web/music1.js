@@ -25,19 +25,19 @@ let track_list = [
     {
         name: "Night Owl",
         artist: "Broke For Free",
-        image: " https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMcf0gZ_NqP0_XY3bSq5bn2U77jPNxEtwvFg&usqp=CAU",
+        image: "icon.jpg",
         path: "jai-ho-jai-ho-slumdog-millionaire-1-1-54922.mp3"
       },
       {
         name: "Enthusiast",
         artist: "Tours",
-        image: " https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMcf0gZ_NqP0_XY3bSq5bn2U77jPNxEtwvFg&usqp=CAU",
+        image: "icon.jpg",
         path: "ek-tarfa-darshan-raval-ringtone-pagalworld-mobi-54938.mp3"
       },
       {
         name: "Shipping Lanes",
         artist: "Chad Crouch",
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMcf0gZ_NqP0_XY3bSq5bn2U77jPNxEtwvFg&usqp=CAU",
+        image: "icon.jpg",
         path: "raataan-lambiyan-jubin-nautiyal-54738-54949-1-54963.mp3 ",
       },
 ];
@@ -105,7 +105,10 @@ function loadTrack(track_index) {
     isPlaying = true;
     
     // Replace icon with the pause icon
-    playpause_btn.innerHTML = '<i class="fa fa-pause-circle fa-5x"></i>';
+    playpause_btn.innerHTML = '<i class="fa fa-pause-circle fa-3x"></i>';
+
+
+    
   }
     
   function pauseTrack() {
@@ -114,7 +117,7 @@ function loadTrack(track_index) {
     isPlaying = false;
     
     // Replace icon with the play icon
-    playpause_btn.innerHTML = '<i class="fa fa-play-circle fa-5x"></i>';
+    playpause_btn.innerHTML = '<i class="fa fa-play-circle fa-3x"></i>';
   }
     
   function nextTrack() {

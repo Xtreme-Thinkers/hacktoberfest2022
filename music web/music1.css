@@ -1,8 +1,8 @@
 body {
-    background-color: lightgreen;
-    
+  background-color: lightgreen;
     /* Smoothly transition the background color */
     transition: background-color .5s;
+    height: inherit;
   }
     
   /* Using flex with the column direction to
@@ -25,26 +25,37 @@ body {
     
   .track-art {
     margin: 25px;
-    height: 250px;
-    width: 250px;
-    background-image: URL(
-       "https://source.unsplash.com/Qrspubmx6kE/640x360");
+    height: 200px;
+    width: 200px;
+    background-image:url(icon.jpg);
     background-size: cover;
     background-position: center;
-    border-radius: 15%;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    box-shadow: aquamarine 0px 12px 40px 10px;
+    border:3px solid aquamarine;
   }
     
   /* Changing the font sizes to suitable ones */
   .now-playing {
-    font-size: 1rem;
+    font-size: 1.5rem;
+    color:deeppink;
   }
     
   .track-name {
-    font-size: 3rem;
+    font-size: 2rem;
+    font-family: 'Abril Fatface', cursive;
+    color: white;
+    font-weight: bold;
+    margin: 0;
+    color:deeppink;
+    text-shadow: 5px 4px 11px rgb(0,0,0), 0 2px 5px rgb(0,0,0);
+    text-align: center;
   }
     
   .track-artist {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
     
   /* Using flex with the row direction to
@@ -53,12 +64,13 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin: auto;
   }
     
   .playpause-track,
   .prev-track,
   .next-track {
-    padding: 25px;
+    padding: 12px;
     opacity: 0.8;
     
     /* Smoothly transition the opacity */
@@ -112,10 +124,6 @@ body {
     opacity: 1.0;
   }
     
-  .seek_slider {
-    width: 60%;
-  }
-    
   .volume_slider {
     width: 30%;
   }
@@ -137,4 +145,51 @@ body {
   i.fa-step-forward,
   i.fa-step-backward {
     cursor: pointer;
+  }
+
+  .player{
+    border:1px solid transparent;
+    width:fit-content;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding:30px 80px;
+    font-weight:bolder;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-color: white;
+    box-shadow: rgba(228, 218, 218, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    background:silver;
+    height:100%;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top:2%;
+    padding: auto;
+    margin-bottom:0;
+    vertical-align:middle;
+    border-radius: 35px;
+  }
+
+
+  .track-name{
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: write 4.5s steps(40, end),blink-caret .75s step-end infinite;
+    animation-iteration-count:infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes write {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: lightgreen; }
   }
