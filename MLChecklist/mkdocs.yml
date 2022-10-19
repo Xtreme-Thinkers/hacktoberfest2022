@@ -1,0 +1,44 @@
+site_name: mymlchecklist
+site_url: https://mymlchecklist.io
+repo_url: https://github.com/Hg03/classification
+copyright: Copyright &copy; 2022 Harish Gehlot
+extra:
+    generator: false
+
+nav:
+  - Introduction: index.md
+  - What is ML: what.md
+  - Types of ML task: types.md
+  - Workflow of ML model: workflow.md
+  - Data Collection: scraping.md
+  - Data Exploration (Classification): dataexpC.md
+  - Data Cleaning : datacleanC.md
+  - Model Selection : modelSelectC.md
+  - Hyperparameter Tuning : tuningC.md
+  - Data Exploration (Regression): dataexpR.md
+  - Feature Engineering : dataEngineering.md
+  - Model Selection : modelSelectR.md
+  - Hyperparameter Tuning : tuningR.md
+
+theme:
+  name:  material
+  logo: img/network.png
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - header.autohide
+
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
