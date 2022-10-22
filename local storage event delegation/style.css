@@ -1,0 +1,92 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    
+    
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.plates{ 
+    text-align:left; 
+    list-style-type:none; 
+  } 
+  .plates li{ 
+    border-bottom:1px solid rgba(0,0,0,0.2); 
+    padding:1rem 0; 
+    font-size: 1.6rem; 
+     display:flex; 
+  } 
+
+  .plates label{ 
+    flex:1; 
+     cursor:pointer; 
+  } 
+
+   .plates input{ 
+      display:none;/* to erase the default checkbox */ 
+  } 
+
+   /* custom checkbox */ 
+   .plates input + label:before{ 
+     content:"⬜️"; 
+     margin-right:1rem; 
+  } 
+
+   .plates input:checked + label:before{ 
+      content:"🌮"; 
+   } 
+
+
+svg{
+margin: 10px;
+background-color: azure;
+height: 83px;
+width: 83px;
+border-radius: 50%;
+}
+.container_form{
+    margin: 0px;
+    padding: 3rem;
+    background-color: rgb(188, 115, 220);
+    box-shadow:  10px 9px 7px pink ;
+    
+    border-radius:300px ;
+    border-color:2px  0px 0px 2px solid white;
+}
+.container_form h2{
+   margin: 15px;
+   font-style: italic, oblique;
+   font-size: 31px;
+color:#c92716 ; 
+display: flex;
+flex-direction: row;
+
+}
+.add-items{
+    padding:12px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px pink;
+    display: flex;
+    flex-direction: row;
+}
+.add-items input{
+    padding: 10px;
+    border-color:  2px  solid black;
+    border-radius:10px ;
+    margin:  auto;
+}
+.add-items input[type="submit"]{
+    background-color: rgb(236, 220, 78);
+    color: #c92716;
+    width:85px ;
+cursor: pointer;
+}
+ 
